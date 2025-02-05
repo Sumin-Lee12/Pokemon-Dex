@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+#root {
+  width: 100%;
+}
+
+h1,
+h2,
+p,
+div {
+  color: black;
+  font-family: "Jua", serif;
+}
+
+.dexStyle {
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+/* style for the homepage ---------------------- */
+
+.home-style {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffc497;
+  padding: 0;
+  margin: 0;
+}
+
+.logo-image {
+  height: 40%;
+}
+
+.home-btn {
+  margin-top: 50px;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ed3215;
+
+  font-size: 16px;
+  font-weight: 800;
+  color: white;
+}
+
+.home-btn:hover {
+  background-color: #ff4e33;
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+.home-btn:active {
+  background-color: #ce3e28;
+  transform: scale(1);
+  transition: 0.2s;
+}
+
+/*style for dashboard from here------------------*/
+
+.title {
+  color: red;
+  font-size: 30px;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  padding: 30px 0;
+}
+
+.pokeball-list {
+  display: flex;
+  width: 100%;
+}
+
+.pokeballs {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  font-size: 40px;
+}
+
+.pokeballs span {
+  background-color: white;
+  border: 3px dotted grey;
+  border-radius: 10%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*style for PokemonList from here------------------*/
+
+.pokemon-list {
+  margin-top: 20px;
+  background-color: #e7e7e7;
+  border-radius: 15px;
+  padding: 30px;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+.card {
+  height: 400px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgb(0,0,0, 0.2);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ed3215;
+
+  font-size: 16px;
+  color: white;
+}
+
+.card-btn:hover {
+  background-color: #ce3e28;
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+.card-btn:active {
+  background-color: #ce3e28;
+  transform: scale(1);
+  transition: 0.2s;
+}
