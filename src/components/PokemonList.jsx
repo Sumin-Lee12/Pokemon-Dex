@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import MOCK_DATA from "./MOCK_DATA";
+import { useNavigate } from "react-router-dom";
 
 const PokemonList = ({ selectedPokemon, setSelectedPokemon }) => {
-
-  console.log(selectedPokemon);
   const addPokemon = (pokemon) => {
-    // console.log(selectedPokemon);
-
     if (selectedPokemon.length >= 6) {
       alert("최대 6개까지만 선택할 수 있습니다!");
       return;
@@ -18,15 +15,31 @@ const PokemonList = ({ selectedPokemon, setSelectedPokemon }) => {
     setSelectedPokemon([...selectedPokemon, pokemon]);
   };
 
+  const navigate = useNavigate();
+
+  const handleCardClick = (id) => {
+    navigate(`/dex/card-detail?id=${id}`);
+  };
+
   return (
     <div className="pokemon-list">
       {MOCK_DATA.map((pokemon) => {
         return (
-          <div key={pokemon.id} className="card">
+          <div
+            key={pokemon.id}
+            onClick={() => handleCardClick(pokemon.id)}
+            className="card"
+          >
             <img src={pokemon.img_url} alt={pokemon.korean_name} />
             <h2>{pokemon.korean_name}</h2>
             <p>00{pokemon.id}</p>
-            <button className="card-btn" onClick={() => addPokemon(pokemon)}>
+            <button
+              className="card-btn"
+              onClick={(e) => {
+                e.stopPropagation();
+                addPokemon(pokemon);
+              }}
+            >
               추가
             </button>
           </div>
