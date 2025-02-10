@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import MOCK_DATA from "./MOCK_DATA";
 import { useNavigate } from "react-router-dom";
+import { PokemonContext } from "../context/PokemonContext.js";
 
-const PokemonList = ({ selectedPokemon, setSelectedPokemon }) => {
+const PokemonList = () => {
+  const {selectedPokemon, setSelectedPokemon} = useContext(PokemonContext);
+  
   const addPokemon = (pokemon) => {
     if (selectedPokemon.length >= 6) {
       alert("최대 6개까지만 선택할 수 있습니다!");
