@@ -14,7 +14,7 @@ div {
 
 .dexStyle {
   padding: 20px;
-  background-color: #ffffff;
+  background-color: #ffc497;
 }
 
 /* style for the homepage ---------------------- */
@@ -70,7 +70,7 @@ div {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #f5f5f5;
+  background-color: #ffe8d6;
   border-radius: 15px;
   padding: 30px 0;
 }
@@ -104,7 +104,7 @@ div {
 
 .pokemon-list {
   margin-top: 20px;
-  background-color: #e7e7e7;
+  background-color: #ffe8d6;
   border-radius: 15px;
   padding: 30px;
 
@@ -119,7 +119,7 @@ div {
 
 .card {
   height: 400px;
-  background-color: white;
+  background-color: #ffc497;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgb(0,0,0, 0.2);
 
