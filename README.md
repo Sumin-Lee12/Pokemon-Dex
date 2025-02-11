@@ -1,8 +1,26 @@
-# React + Vite
+# Pokemon-Dex
+<br/><br/>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🎥 소개 영상
+[영상 링크]
+<br/><br/><br/><br/>
 
-Currently, two official plugins are available:
+## 🧾 프로젝트 소개
+📅 **개발 기간** : 2025.02.01 ~ 2025.02.10
+💻 **개발 환경** : VS Code, React, Redux Toolkit
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+이 프로젝트는 포켓몬을 추가하고 관리할 수 있는 웹 애플리케이션입니다. 사용자는 포켓몬 목록을 보고, 선택하거나 삭제할 수 있으며, 각 포켓몬의 세부 정보를 확인할 수 있습니다.
+
+<br/><br/><br/><br/>
+
+## ⚙ 주요 기능 소개
+
+🏅**포켓몬 관리 기능**
+포켓몬을 목록에 추가하고, 삭제할 수 있습니다.
+각 포켓몬을 선택하면 상세 페이지로 이동하여, 포켓몬에 대한 추가 정보를 확인할 수 있습니다.
+<br/>
+
+📚 **컴포넌트 및 상태 관리**
+React와 Redux Toolkit을 사용하여 상태를 관리하며, 포켓몬 목록과 선택된 포켓몬을 전역 상태에서 관리합니다.
+여러 개의 컴포넌트를 분리하여 코드의 재사용성과 가독성을 높였습니다.
+<br/><br/>
