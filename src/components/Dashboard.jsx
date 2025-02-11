@@ -1,9 +1,10 @@
-import { useState, useContext } from "react";
 import PokemonList from "./PokemonList";
-import { PokemonContext } from "../context/PokemonContext.js";
+import { useDispatch, useSelector } from "react-redux";
+import { removePokemon } from "../redux/pokemonSlice"
 
 const Dashboard = () => {
-  const {selectedPokemon, setSelectedPokemon} = useContext(PokemonContext);
+  const dispatch = useDispatch();
+  const selectedPokemon = useSelector((state) => state.pokemon.selectedPokemon || []);
 
   const renderPokemonSlot = (index) => {
     return selectedPokemon[index] ? (
@@ -30,8 +31,7 @@ const Dashboard = () => {
   };
 
   const DeletePokemonSlot = (id) => {
-    const updatedSlots = selectedPokemon.filter((pokemon) => pokemon.id !== id);
-    setSelectedPokemon(updatedSlots);
+    dispatch(removePokemon(id));
   };
 
   return (
@@ -53,7 +53,3 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-
-
-// 포켓볼 사진 링크: https://i.etsystatic.com/33357979/r/il/e1dfcd/3584257734/il_794xN.3584257734_bfy9.jpg
-

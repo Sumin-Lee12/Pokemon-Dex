@@ -1,34 +1,32 @@
 import { useNavigate } from "react-router-dom";
 import Dashboard from "../components/Dashboard";
 import PokemonList from "../components/PokemonList";
-import { useState } from "react";
-import { PokemonContext } from "../context/PokemonContext";
+import { useDispatch } from "react-redux";
+import { setSelectedPokemon } from "../redux/pokemonSlice";
 
 const Dex = () => {
   const navigate = useNavigate();
-  const [selectedPokemon, setSelectedPokemon] = useState([]);
+  const dispatch = useDispatch();
 
-  console.log(setSelectedPokemon);
+  // 필요한 상태 관리 (예: selectedPokemon) 등을 여기서 처리할 수 있습니다.
+  const handleSelectPokemon = (pokemon) => {
+    dispatch(setSelectedPokemon(pokemon));  // 상태 업데이트
+  };
 
   return (
-    <PokemonContext.Provider
-      value={{
-        selectedPokemon: selectedPokemon,
-        setSelectedPokemon: setSelectedPokemon,
-      }}
-    >
+    <>
       <div className="dexStyle">
         <Dashboard />
-        <PokemonList />
+        <PokemonList onSelectPokemon={handleSelectPokemon} />
       </div>
       <button
         onClick={() => {
-          navigate("/");
+          navigate("/"); // 메인 페이지로 이동
         }}
       >
         메인(홈)으로 이동
       </button>
-    </PokemonContext.Provider>
+    </>
   );
 };
 
